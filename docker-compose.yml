@@ -1,0 +1,7 @@
+# docker composeファイルのバージョンを指定
+version: "3.9"
+services:
+  app: # => サービス名は任意
+    build: ./infra/php #=> ビルドコンテキスト、Dockerfileを置いてる場所を指す
+    volumes: #=> ボリュームの保存先 ./backend => ホスト側/work に保存する
+      - ./backend:/work
